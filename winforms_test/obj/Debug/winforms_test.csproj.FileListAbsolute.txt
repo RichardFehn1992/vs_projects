@@ -6,3 +6,4 @@ C:\vs_projects\winforms_test\winforms_test\obj\Debug\winforms_test.Properties.Re
 C:\vs_projects\winforms_test\winforms_test\obj\Debug\winforms_test.csproj.GenerateResource.Cache
 C:\vs_projects\winforms_test\winforms_test\obj\Debug\winforms_test.exe
 C:\vs_projects\winforms_test\winforms_test\obj\Debug\winforms_test.pdb
+C:\vs_projects\winforms_test\winforms_test\obj\Debug\winforms_test.Form1.resources

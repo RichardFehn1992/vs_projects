@@ -15,6 +15,30 @@ namespace winforms_test
         public Form1()
         {
             InitializeComponent();
+
+            TreeNode mainNode = new TreeNode();
+            mainNode.Name = "mainNode";
+            mainNode.Text = "Main";
+            treeView1.Nodes.Add(mainNode);
+            treeView1.Nodes.Add(mainNode);
+        }
+
+        private void button_test_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            Console.WriteLine("hi");
+
+            switch (e.Action)
+            {
+                case TreeViewAction.ByMouse:
+
+                    Console.WriteLine("hi"); 
+                    break; 
+            }
         }
     }
 }

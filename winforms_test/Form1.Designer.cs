@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button_test = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // button_test
@@ -42,18 +42,19 @@
             this.button_test.UseVisualStyleBackColor = true;
             this.button_test.Click += new System.EventHandler(this.button_test_Click);
             // 
-            // treeView1
+            // listView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(68, 136);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 97);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.listView1.Location = new System.Drawing.Point(205, 136);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(348, 97);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.treeView1);
+            this.ClientSize = new System.Drawing.Size(656, 261);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button_test);
             this.Name = "Form1";
             this.ResumeLayout(false);
@@ -64,7 +65,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_test;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

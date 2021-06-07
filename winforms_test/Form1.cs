@@ -16,29 +16,36 @@ namespace winforms_test
         {
             InitializeComponent();
 
-            TreeNode mainNode = new TreeNode();
-            mainNode.Name = "mainNode";
-            mainNode.Text = "Main";
-            treeView1.Nodes.Add(mainNode);
-            treeView1.Nodes.Add(mainNode);
-        }
+            StringHandler h_str = new StringHandler(); 
+            ListViewHandler h_listView = new ListViewHandler();
 
-        private void button_test_Click(object sender, EventArgs e)
-        {
+            h_listView.set_position_and_size(ref listView1, 20, 20, 300, 200);
+            h_listView.set_config_settings(ref listView1, View.Details, true, true, true, true, true, SortOrder.Ascending);
 
-        }
+            h_listView.add_column(ref listView1, "name", -2);
+            h_listView.add_column(ref listView1, "quantity", -2);
+            h_listView.add_column(ref listView1, "size", -2);
+            h_listView.add_column(ref listView1, "range", -2);
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            Console.WriteLine("hi");
-
-            switch (e.Action)
+            for(int i = 0; i < 3; i++)
             {
-                case TreeViewAction.ByMouse:
+                ListViewItem item = new ListViewItem("item: " + h_str.intToStr(i), 0);
+                // Place a check mark next to the item.
+                item.Checked = true;
+                item.SubItems.Add("1");
+                item.SubItems.Add("2");
+                item.SubItems.Add("3");
+                item.ForeColor = Color.Black;
+                item.BackColor = Color.LightGray; 
 
-                    Console.WriteLine("hi"); 
-                    break; 
+                listView1.Items.Add(item); 
             }
+            
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("haha"); 
         }
     }
 }
